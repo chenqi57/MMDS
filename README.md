@@ -1,5 +1,5 @@
 # MMDS
-\textbf{M}odified \textbf{M}ulti-\textbf{D}imensional \textbf{S}caling Algorithm.
+**M**odified **M**ulti-**D**imensional **S**caling Algorithm.
 
 ## Description
 This package is an implementation of \textbf{M}odified Multi-Dimensional Scaling Algorithm.
