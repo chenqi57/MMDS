@@ -15,7 +15,7 @@ library(mmds)
 ```
 or directly from the `MMDS_0.1.1.tar.gz`:
 ```r
-install.packages("MMDS_0.1.1.tar.gz", repos = NULL, type ="source")
+install.packages("MMDS_0.1.1.tar.gz", repos = NULL, type = "source")
 library(mmds)
 ```
 
