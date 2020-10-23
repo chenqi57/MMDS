@@ -2,7 +2,7 @@
 **M**odified **M**ulti-**D**imensional **S**caling Algorithm.
 
 ## Description
-This package is an implementation of \textbf{M}odified Multi-Dimensional Scaling Algorithm.
+This package is an implementation of Modified Multi-Dimensional Scaling Algorithm.
 
 ## Installation
 Install `MMDS` from GitHub:
