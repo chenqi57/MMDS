@@ -1,0 +1,13 @@
+Package: mmds
+Type: Package
+Title: Modified Multidimensional Scaling
+Version: 0.1.1
+Author: Qiang Sun, Yicheng Zeng
+Maintainer: Yicheng Zeng <statzyc@gmail.com>
+Description: An implementation of the modified multidimensional scaling algorithm created by Qiang Sun and Yicheng Zeng in 2020.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends: ggplot2, ClusterR
+NeedsCompilation: no
+Packaged: 2020-10-22 15:13:10 UTC; qingyuanchen
