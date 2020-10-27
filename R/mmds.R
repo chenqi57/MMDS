@@ -1,6 +1,6 @@
 eigen_centered <- function(X){
-  centered_X = center_scale(X)
-  S = centered_X %*% t(centered_X)
+  centered_XT = center_scale(t(X))
+  S = t(centered_XT) %*% centered_XT
   eigen(S)
 }
 
@@ -9,14 +9,19 @@ r <- function(eigen, w){
   max(which(logdiff >= 0.5*log(1+w)))
 }
 
-MMDS <- function(X, MM=2, sigma, w=-0.999999){
+MMDS <- function(X, MM=2, sigma, w=-0.999999, centered=TRUE){
   N = dim(X)[1]
   d = dim(X)[2]
   K = min(N,d)
   c = d/N
 
-  Eigen = eigen(X%*%t(X))
-  ##Eigen = eigen_centered(X)
+  if (centered){
+    Eigen = eigen(X%*%t(X))
+  }
+  else{
+    Eigen = eigen_centered(X)
+  }
+
   eigenvalue = Eigen$value
   eigenvector = Eigen$vector
   eigen = eigenvalue[1:K]
