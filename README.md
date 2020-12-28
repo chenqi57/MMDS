@@ -13,7 +13,7 @@ library(devtools)
 devtools::install_github("chenqi57/MMDS")
 library(mmds)
 ```
-or directly from the `MMDS_0.1.1.tar.gz`:
+or directly from the `MMDS_1.0.1.tar.gz`:
 ```r
 install.packages("MMDS_0.1.1.tar.gz", repos = NULL, type = "source")
 library(mmds)
