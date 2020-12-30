@@ -15,12 +15,18 @@ library(mmds)
 ```
 or directly from the `MMDS_1.0.1.tar.gz`:
 ```r
-install.packages("MMDS_0.1.1.tar.gz", repos = NULL, type = "source")
+install.packages("MMDS_1.0.1.tar.gz", repos = NULL, type = "source")
 library(mmds)
 ```
+## Functions
 
-## Getting help
+Three functions are contained in this package, where two functions are the implementation of the MMDS algorithm.
 
-You can have access to the documentation of the functions by typing `?` before function name at the R command. 
+* `eigen_centered`: Center the sample $X$ to $Y$ and return $S = YY^{T}$.
+* `MMDS`: Modified Multi-Dimensional Scaling Algorithm using eigen-decompision methods provided by R.
+* `MMDS`: Modified Multi-Dimensional Scaling Algorithm using eigen-decompision methods provided by C++.
 
-For example, `?MMDS` will show the documentation of the function `MMDS` with inputs, outputs and examples in detail.
+## Documentation
+
+Documentations of the above functions can be accesed by typing `?` before each function's name at the R command. 
+For instance, the user can read the function `MMDS`'s argument, output and examples in detail by typing `?MMDS`.
