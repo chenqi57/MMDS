@@ -29,7 +29,7 @@ Documentations of the above functions can be accesed by typing `?` before each f
 For instance, the user can read the function `MMDS`'s argument, output and examples in detail by typing `?MMDS`.
 
 ## Example
-Suppose you have a *1000 &times 1500* sample matrix `sample`, where the sample consists of 1500 data points from five guassian distributions with same covariance matrix *0.45I* but different means. The information about which group each data point belongs to is stored in `Labels`.
+Suppose you have a 1000×1500 sample matrix `sample`, where the sample consists of 1500 data points from five guassian distributions with same covariance matrix 0.45I(1000) but different means. The information about which group each data point belongs to is stored in `Labels`.
 
 'MMDS'
 ```r
@@ -39,7 +39,8 @@ sample_MMDS = MMDS(X = t(sample), MM = 2, sigma = sqrt(0.45), centered = FALSE)
 data = data.frame(sample_MMDS)
 data$label = Labels
 
-ggplot(data,aes(x=data[,1],y=data[,2],colour=Labels))+geom_point(size=1)+xlab("")+ylab("")+theme(legend.position="none")
+ggplot(data,aes(x = data[, 1], y = data[, 2], colour = Labels)) + 
+geom_point(size=1) + xlab("") + ylab("") + theme(legend.position="none")
 ```
 
 'MMDS.cpp'
@@ -48,5 +49,6 @@ sample_MMDS_cpp = MMDS.cpp(X = t(sample), MM = 2, sigma = sqrt(0.45), centered =
 data2= data.frame(sample_MMDS_cpp)
 data2$label = Labels
 
-ggplot(data2,aes(x=data2[,1],y=data2[,2],colour=Labels))+geom_point(size=1)+xlab("")+ylab("")+theme(legend.position="none")
+ggplot(data2,aes(x = data2[, 1],y=data2[, 2], colour = Labels)) +
+geom_point(size=1) + xlab("") + ylab("") + theme(legend.position="none")
 ```
