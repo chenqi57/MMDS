@@ -22,7 +22,7 @@ library(mmds)
 
 Three functions are contained in this package, where two functions are the implementation of the MMDS algorithm.
 
-* `eigen_centered`: Center the sample $X$ to $Y$ and return $S = YY^{T}$.
+* `eigen_centered`: Center the sample *X* to *Y* and return *S = YY^{T}*.
 * `MMDS`: Modified Multi-Dimensional Scaling Algorithm using eigen-decompision methods provided by R.
 * `MMDS`: Modified Multi-Dimensional Scaling Algorithm using eigen-decompision methods provided by C++.
 
