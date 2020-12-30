@@ -53,4 +53,4 @@ data2$label = Labels
 ggplot(data2,aes(x = data2[, 1],y=data2[, 2], colour = Labels)) +
 geom_point(size=1) + xlab("") + ylab("") + theme(legend.position = "none")
 ```
-![image](https://imgur.com/ZPkpacl.png)
+![image](https://imgur.com/ZPkpacl.png #center){width = 0.75}
