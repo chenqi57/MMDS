@@ -12,9 +12,8 @@ MMDS <- function(X, MM=2, sigma, centered=TRUE){
 
   if (centered){
     Eigen = eigen(X%*%t(X))
-  }
-  else{
-    Eigen = eigen_centered(X)
+  } else{
+    Eigen = eigen(eigen_centered(X))
   }
 
   eigenvalue = Eigen$value
@@ -59,8 +58,7 @@ MMDS.cpp <- function(X, MM=2, sigma, centered=TRUE){
 
   if (centered){
     S = X%*%t(X)
-  }
-  else{
+  } else{
     S = eigen_centered(X)
   }
 
