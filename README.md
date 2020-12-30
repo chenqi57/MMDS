@@ -31,7 +31,7 @@ For instance, the user can read the function `MMDS`'s argument, output and examp
 ## Example
 Suppose you have a 1000×1500 sample matrix `sample`, where the sample consists of 1500 data points from five guassian distributions with same covariance matrix 0.45I(1000) but different means. The information about which group each data point belongs to is stored in `Labels`.
 
-'MMDS'
+`MMDS`
 ```r
 library(mmds)
 
@@ -44,7 +44,7 @@ geom_point(size=1) + xlab("") + ylab("") + theme(legend.position = "none")
 ```
 ![image](https://imgur.com/md5H41j.png)
 
-'MMDS.cpp'
+`MMDS.cpp`
 ```r
 sample_MMDS_cpp = MMDS.cpp(X = t(sample), MM = 2, sigma = sqrt(0.45), centered = FALSE)
 data2= data.frame(sample_MMDS_cpp)
@@ -53,4 +53,4 @@ data2$label = Labels
 ggplot(data2,aes(x = data2[, 1],y=data2[, 2], colour = Labels)) +
 geom_point(size=1) + xlab("") + ylab("") + theme(legend.position = "none")
 ```
-![image](https://imgur.com/ZPkpacl.png #center){width = 0.75}
+![image](https://imgur.com/ZPkpacl.png#center){width = 75%}
