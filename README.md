@@ -40,9 +40,9 @@ data = data.frame(sample_MMDS)
 data$label = Labels
 
 ggplot(data,aes(x = data[, 1], y = data[, 2], colour = Labels)) + 
-geom_point(size=1) + xlab("") + ylab("") + theme(legend.position = "none")
+geom_point(size = 1) + xlab("") + ylab("") + theme(legend.position = "none")
 ```
-![image](https://imgur.com/md5H41j.png#center){width=250px}
+![image](https://imgur.com/md5H41j.png#center)
 
 `MMDS.cpp`
 ```r
@@ -51,6 +51,6 @@ data2= data.frame(sample_MMDS_cpp)
 data2$label = Labels
 
 ggplot(data2,aes(x = data2[, 1],y=data2[, 2], colour = Labels)) +
-geom_point(size=1) + xlab("") + ylab("") + theme(legend.position = "none")
+geom_point(size = 1) + xlab("") + ylab("") + theme(legend.position = "none")
 ```
-![image](https://imgur.com/ZPkpacl.png#center){width=250px}
+![image](https://imgur.com/ZPkpacl.png#center)
