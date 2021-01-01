@@ -7,34 +7,34 @@
 using namespace Rcpp;
 
 // getEigen
-SEXP getEigen(const arma::mat& M);
+SEXP getEigen(arma::mat M);
 RcppExport SEXP _mmds_getEigen(SEXP MSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::mat& >::type M(MSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type M(MSEXP);
     rcpp_result_gen = Rcpp::wrap(getEigen(M));
     return rcpp_result_gen;
 END_RCPP
 }
 // getEigenValue
-arma::vec getEigenValue(const arma::mat& M);
+arma::vec getEigenValue(arma::mat M);
 RcppExport SEXP _mmds_getEigenValue(SEXP MSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::mat& >::type M(MSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type M(MSEXP);
     rcpp_result_gen = Rcpp::wrap(getEigenValue(M));
     return rcpp_result_gen;
 END_RCPP
 }
 // getEigenVector
-arma::mat getEigenVector(const arma::mat& M);
+arma::mat getEigenVector(arma::mat M);
 RcppExport SEXP _mmds_getEigenVector(SEXP MSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::mat& >::type M(MSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type M(MSEXP);
     rcpp_result_gen = Rcpp::wrap(getEigenVector(M));
     return rcpp_result_gen;
 END_RCPP
