@@ -8,13 +8,7 @@
 \description{
 \packageDescription{mmds}
 }
-\details{
 
-The DESCRIPTION file:
-\packageDESCRIPTION{mmds}
-\packageIndices{mmds}
-~~ An overview of how to use the package, including the most important functions ~~
-}
 \author{
 \packageAuthor{mmds}
 
@@ -26,9 +20,9 @@ Maintainer: \packageMaintainer{mmds}
 ~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation directory ~~
 \keyword{ package }
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+\code{\link{MMDS}}, \code{\link{MMDS.cpp}}
 }
 \examples{
-MMDS.cpp(X=matrix(c(2,3,5,2,3,7,8,4,5),3,3))
+MMDS(X = matrix(c(2,3,5,2,3,7,8,4,5), 3, 3))
+MMDS.cpp(X = matrix(c(2,3,5,2,3,7,8,4,5), 3, 3))
 }

@@ -11,9 +11,9 @@ MMDS <- function(X, MM=2, sigma, centered=TRUE){
   c = d/N
 
   if (centered){
-    Eigen = eigen(X%*%t(X))
+    Eigen = eigen(X%*%t(X), symmetric=TRUE)
   } else{
-    Eigen = eigen(eigen_centered(X))
+    Eigen = eigen(eigen_centered(X), symmetric=TRUE)
   }
 
   eigenvalue = Eigen$value
