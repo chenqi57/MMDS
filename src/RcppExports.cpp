@@ -6,6 +6,17 @@
 
 using namespace Rcpp;
 
+// getEigen
+SEXP getEigen(const arma::mat& M);
+RcppExport SEXP _mmds_getEigen(SEXP MSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::mat& >::type M(MSEXP);
+    rcpp_result_gen = Rcpp::wrap(getEigen(M));
+    return rcpp_result_gen;
+END_RCPP
+}
 // getEigenValue
 arma::vec getEigenValue(const arma::mat& M);
 RcppExport SEXP _mmds_getEigenValue(SEXP MSEXP) {
@@ -28,22 +39,11 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// getEigen
-SEXP getEigen(const arma::mat& M);
-RcppExport SEXP _mmds_getEigen(SEXP MSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::mat& >::type M(MSEXP);
-    rcpp_result_gen = Rcpp::wrap(getEigen(M));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_mmds_getEigen", (DL_FUNC) &_mmds_getEigen, 1},
     {"_mmds_getEigenValue", (DL_FUNC) &_mmds_getEigenValue, 1},
     {"_mmds_getEigenVector", (DL_FUNC) &_mmds_getEigenVector, 1},
-    {"_mmds_getEigen", (DL_FUNC) &_mmds_getEigen, 1},
     {NULL, NULL, 0}
 };
 

@@ -57,13 +57,13 @@ MMDS.cpp <- function(X, MM=2, sigma, centered=TRUE){
   c = d/N
 
   if (centered){
-    S = X%*%t(X)
+    Eigen = getEigen(X%*%t(X))
   } else{
-    S = eigen_centered(X)
+    Eigen = getEigen(eigen_centered(X))
   }
-
-  eigenvalue = rev(getEigenValue(S))
-  eigenvector = as.matrix(rev(as.data.frame(getEigenVector(S))))
+  
+  eigenvalue = rev(Eigen$val)
+  eigenvector = as.matrix(rev(as.data.frame(Eigen$vec)))
   eigen = eigenvalue[1:K]
 
   if(missing(sigma)){
