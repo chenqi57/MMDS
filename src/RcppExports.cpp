@@ -7,35 +7,78 @@
 using namespace Rcpp;
 
 // getEigen
-SEXP getEigen(arma::mat M);
+SEXP getEigen(const arma::mat& M);
 RcppExport SEXP _mmds_getEigen(SEXP MSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type M(MSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type M(MSEXP);
     rcpp_result_gen = Rcpp::wrap(getEigen(M));
     return rcpp_result_gen;
 END_RCPP
 }
 // getEigenValue
-arma::vec getEigenValue(arma::mat M);
+arma::vec getEigenValue(const arma::mat& M);
 RcppExport SEXP _mmds_getEigenValue(SEXP MSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type M(MSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type M(MSEXP);
     rcpp_result_gen = Rcpp::wrap(getEigenValue(M));
     return rcpp_result_gen;
 END_RCPP
 }
 // getEigenVector
-arma::mat getEigenVector(arma::mat M);
+arma::mat getEigenVector(const arma::mat& M);
 RcppExport SEXP _mmds_getEigenVector(SEXP MSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type M(MSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type M(MSEXP);
     rcpp_result_gen = Rcpp::wrap(getEigenVector(M));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_hello_world
+arma::mat rcpparma_hello_world();
+RcppExport SEXP _mmds_rcpparma_hello_world() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_outerproduct
+arma::mat rcpparma_outerproduct(const arma::colvec& x);
+RcppExport SEXP _mmds_rcpparma_outerproduct(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_innerproduct
+double rcpparma_innerproduct(const arma::colvec& x);
+RcppExport SEXP _mmds_rcpparma_innerproduct(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpparma_bothproducts
+Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
+RcppExport SEXP _mmds_rcpparma_bothproducts(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -44,6 +87,10 @@ static const R_CallMethodDef CallEntries[] = {
     {"_mmds_getEigen", (DL_FUNC) &_mmds_getEigen, 1},
     {"_mmds_getEigenValue", (DL_FUNC) &_mmds_getEigenValue, 1},
     {"_mmds_getEigenVector", (DL_FUNC) &_mmds_getEigenVector, 1},
+    {"_mmds_rcpparma_hello_world", (DL_FUNC) &_mmds_rcpparma_hello_world, 0},
+    {"_mmds_rcpparma_outerproduct", (DL_FUNC) &_mmds_rcpparma_outerproduct, 1},
+    {"_mmds_rcpparma_innerproduct", (DL_FUNC) &_mmds_rcpparma_innerproduct, 1},
+    {"_mmds_rcpparma_bothproducts", (DL_FUNC) &_mmds_rcpparma_bothproducts, 1},
     {NULL, NULL, 0}
 };
 

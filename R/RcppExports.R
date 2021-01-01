@@ -13,3 +13,19 @@ getEigenVector <- function(M) {
     .Call(`_mmds_getEigenVector`, M)
 }
 
+rcpparma_hello_world <- function() {
+    .Call(`_mmds_rcpparma_hello_world`)
+}
+
+rcpparma_outerproduct <- function(x) {
+    .Call(`_mmds_rcpparma_outerproduct`, x)
+}
+
+rcpparma_innerproduct <- function(x) {
+    .Call(`_mmds_rcpparma_innerproduct`, x)
+}
+
+rcpparma_bothproducts <- function(x) {
+    .Call(`_mmds_rcpparma_bothproducts`, x)
+}
+

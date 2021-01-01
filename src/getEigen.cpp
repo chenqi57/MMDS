@@ -1,9 +1,7 @@
-#include <RcppCommon.h>
 #include <RcppArmadillo.h>
 
-// [[Rcpp::depends("RcppArmadillo")]]
 // [[Rcpp::export]]
-SEXP getEigen(arma::mat M) {
+SEXP getEigen(const arma::mat &M) {
   arma::vec eigval;
   arma::mat eigvec;
   
@@ -14,7 +12,7 @@ SEXP getEigen(arma::mat M) {
 
 // [[Rcpp::export]]
 
-arma::vec getEigenValue(arma::mat M) {
+arma::vec getEigenValue(const arma::mat &M) {
   arma::vec eigval;
   arma::mat eigvec;
   
@@ -24,7 +22,7 @@ arma::vec getEigenValue(arma::mat M) {
 
 // [[Rcpp::export]]
 
-arma::mat getEigenVector(arma::mat M) {
+arma::mat getEigenVector(const arma::mat &M) {
   arma::vec eigval;
   arma::mat eigvec;
   
