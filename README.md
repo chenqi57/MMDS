@@ -50,7 +50,7 @@ sample_MMDS_cpp = MMDS.cpp(X = t(sample), MM = 2, sigma = sqrt(0.45), centered =
 data2= data.frame(sample_MMDS_cpp)
 data2$label = Labels
 
-ggplot(data2,aes(x = data2[, 1],y=data2[, 2], colour = Labels)) +
+ggplot(data2,aes(x = data2[, 1], y = data2[, 2], colour = Labels)) +
 geom_point(size = 1) + xlab("") + ylab("") + theme(legend.position = "none")
 ```
 ![image](https://imgur.com/ZPkpacl.png#center)
