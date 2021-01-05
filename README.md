@@ -47,7 +47,7 @@ geom_point(size = 1) + xlab("") + ylab("") + theme(legend.position = "none")
 `MMDS.cpp`
 ```r
 sample_MMDS_cpp = MMDS.cpp(X = t(sample), MM = 2, sigma = sqrt(0.45), centered = FALSE)
-data2= data.frame(sample_MMDS_cpp)
+data2 = data.frame(sample_MMDS_cpp)
 data2$label = Labels
 
 ggplot(data2,aes(x = data2[, 1], y = data2[, 2], colour = Labels)) +
