@@ -22,7 +22,7 @@ Three functions are contained in this package, where two functions are the imple
 
 * `eigen_centered`: Center the sample matrix *X* to *Y* and return *Y*'s corresponding distance matrix.
 * `MMDS`: Modified Multi-Dimensional Scaling Algorithm using eigen-decompision methods provided by R.
-* `MMDS`: Modified Multi-Dimensional Scaling Algorithm using eigen-decompision methods provided by C++.
+* `MMDS.cpp`: Modified Multi-Dimensional Scaling Algorithm using eigen-decompision methods provided by C++.
 
 ## Documentation
 Documentations of the above functions can be accesed by typing `?` before each function's name at the R command. 
